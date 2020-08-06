@@ -11,44 +11,25 @@
   color: var(--color-text-in-primary);
 }
 
-#search-teachers .form-group {
-  position: relative;
-}
-
-#search-teachers .form-group label {
-  font-size: 1.4rem;
-}
-
-#search-teachers .form-group + .form-group {
-  margin-top: 1.4rem;
-}
-
-#search-teachers .form-group input {
+#search-teachers button {
   width: 100%;
   height: 5.6rem;
-  margin-top: 0.8rem;
+  background: var(--color-secondary);
+  color: var(--color-button-text);
+  border: 0;
   border-radius: 0.8rem;
-  background: var(--color-input-background);
-  border: 1px solid var(--color-line-in-white);
-  outline: 0;
-  padding: 0 1.6rem;
-  font: 1.5rem Archivo, sans-serif;
+  cursor: pointer;
+  font: 700 1.6rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color .2s;
+  margin-top: 3.2rem;
 }
 
-#search-teachers .form-group:focus-within::after {
-  height: 2px;
-}
-
-#search-teachers .form-group::after {
-  transition: height 0.2s ease-in;
-  width: calc(100% - 3.2rem);
-  height: 0px;
-  content: "";
-  background: var(--color-primary-light);
-  position: absolute;
-  left: 1.6rem;
-  right: 1.6rem;
-  bottom: 0;
+#search-teachers button:hover {
+  background: var(--color-secondary-dark);
 }
 
 #page-teacher-list main {
@@ -63,7 +44,7 @@
 
   #search-teachers {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     position: absolute;
     bottom: -28px;
@@ -75,7 +56,7 @@
 
   #page-teacher-list main {
     padding: 3.2rem 0;
-    max-width: 740px;
+    max-width: 900px;
     margin: 0 auto;
   }
 }
