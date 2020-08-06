@@ -19,6 +19,6 @@ export default new (class ConnectionController {
       user_id,
     });
 
-    return res.sendStatus(201);
+    return res.status(201);
   }
 })();

@@ -18,7 +18,7 @@ export default new (class ClassesController {
     const time = filters.time as string;
 
     if (!subject || !week_day || !time) {
-      return res.sendStatus(400).json({
+      return res.status(400).json({
         error: "Missing filters!",
       });
     }
@@ -76,13 +76,13 @@ export default new (class ClassesController {
 
       await trx.commit();
 
-      return res.sendStatus(201);
+      return res.status(201).json({ message: 'Success'})
     } catch (error) {
       trx.rollback();
 
       console.log(error);
 
-      return res.sendStatus(400).json({
+      return res.status(400).json({
         error: "Unexpected error while creating record.",
       });
     }
